@@ -8,22 +8,18 @@ These tests are developed in TypeScript with [WebDriverIO V6](http://webdriver.i
 
 ## Features
 
--   TypeScript
+-   WebDriverIO
 -   [Expect-webdriverio](https://github.com/webdriverio/expect-webdriverio)
 -   Page Object Pattern
--   [Gherkin lint](https://github.com/vsiakka/gherkin-lint)
--   Scripts to check undefined and unused steps on step/feature files
--   [Commit lint](https://github.com/conventional-changelog/commitlint) and [Commitizen](https://github.com/commitizen/cz-cli#making-your-repo-commitizen-friendly)
--   ESlint
--   Prettier
--   Husky
--   Github Actions example
+-   Android Native App automation
 -   Allure report (screenshots on failure) and Timeline report
 
 ## Requirements
 
--   node >= 12.18.x - [how to install Node](https://nodejs.org/en/download/)
--   npm >= 6.14.x - [how to install NPM](https://www.npmjs.com/get-npm)
+-   node >= 18.10.0
+-   npm >= 8.19.2
+-   java >=11.0.12
+-   appium >=1.22
 
 ## Getting Started
 
@@ -32,17 +28,12 @@ Install the dependencies:
 ```bash
 npm install
 ```
-
-Compile TypeScript:
-
-```bash
-npm run build
 ```
 
 Run e2e tests:
 
 ```bash
-npm run tests:e2e
+npx wdio ./config/android.config.js
 ```
 
 ## Reports
@@ -61,15 +52,5 @@ You can run this command to start a server on your machine and open the allure r
 npm run report:open
 ```
 
-### Time line reporter
-
-You can see [Timeline report](https://github.com/QualityOps/wdio-timeline-reporter) in `./test-report/timeline/timeline-report.html`
-
-## Prettier and Eslint
-
-Run to format the code:
-
-```bash
-npm run code:format
 ```
 
